@@ -1,0 +1,504 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 2560px) {
+  body {
+    zoom: 1.5; /* scale everything 2x */
+    /* or alternatively */
+    transform: scale(2);
+    transform-origin: top left;
+  }
+}
+@media (min-width: 3840px) {
+  body {
+    zoom: 2; /* scale everything 2x */
+    /* or alternatively */
+    transform: scale(2);
+    transform-origin: top left;
+  }
+}
+
+body {
+    background-color: #0E0E10;
+    color: white;
+}
+.navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+}
+.red {
+    color: red;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(circle at top right,#1D1D1D80 0%,#AD000080 100%);
+    width: fit-content;
+    padding: 10px 60px 10px 60px;
+    border-radius: 5px;
+}
+.logo-text{
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.balance {
+    background-color: #221D1D;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #FF000033;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    justify-content: space-between;
+}
+.top-up-box {
+    width: 25px;
+    height: 30px;
+    background-color: #FF000033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.balance-icon {
+    margin-left: 5px;
+}
+.balance-currency {
+    margin-right: 3px;
+}
+
+.login-button {
+    width: 100px;
+    height: 30px;
+    background-color: #1A1A1A;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.register-button {
+    width: 100px;
+    height: 30px;
+    background-color: #FF000080;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.register-button:hover {
+    background-color: #FF00004D;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: rgba(11, 9, 10, 0.5);
+    cursor: pointer;
+}
+
+.balance-login-register {
+    display: flex;
+    gap: 10px;
+}
+
+.prompt {
+    background: linear-gradient(to top left, #960000, #0b090a 80%);
+    font-size: clamp(10px, 0.833vw, 12px);
+    position: relative;
+    overflow: hidden;
+    min-width: 150px;
+    border-radius: 0.5rem;
+}
+.none > img {
+    display: none;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0 15px 20px;
+    color: rgba(255, 255, 255, 0.7)
+}
+.selection:hover {
+    background: linear-gradient(to left, #7D0000, #0b090a);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.selection > p {
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.prompt1-bigger-text {
+    color: red;
+}
+.prompt > .register-button {
+    width: 30%;
+    max-width: 100px;
+    margin: 0.5rem 0 1rem 1rem;
+    font-size: clamp(8px, 0.8vw, 10px);
+}
+
+.prompt > p {
+    margin: 1rem 0 0 1rem;
+    line-height: 1.3;
+}
+
+.prompt1-img {
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+    position:absolute;
+    right: -35%;
+    bottom: 0%;
+}
+
+.main-grid {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one four four four four four five'
+    'three four four four four four five'
+    'three four four four four four five'
+    'three six seven eight nine ten five'
+    '. eleven eleven eleven eleven eleven .';
+}
+.play {
+    background: linear-gradient(to top left, #960000, #000000 80%);
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+.play > img {
+    position: absolute;
+    width: 80%;
+    right: -20%;
+    bottom: -10%;
+    opacity: 1;
+    z-index: 1;
+}
+.play > p {
+    font-size: 12px;
+    padding-left: 0.5rem;
+    z-index: 2;
+}
+
+
+.play-button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #FF0000B3 ;
+    color: white;
+    width: fit-content;
+    padding: 2px 20px;
+    border-radius: 0.2rem;
+    z-index: 2;
+    width: 70%;
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+}
+.play-button > p {
+    font-size: 10px;
+}
+
+.prompt1 {
+    grid-area: one;
+}
+.prompt2 {
+    grid-area: two;
+}
+.selection-section {
+    grid-area: three;
+    background-color: #1A1A1A;
+    border-radius: 0.5rem;
+}
+.hero-section-desktop {
+    grid-area: four;
+    background: linear-gradient(to left, #7D0000, #000000 90%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.hero-img {
+    position: absolute;
+    height: 130%;
+    width: 60%;
+    right: -10%;
+    bottom: -10%;
+    object-fit: contain;
+}
+.hero-left {
+    width: 50%;
+}
+.hero-left > h2 {
+    font-weight: normal;
+    font-size: 15px;
+}
+.hero-left > h1 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 2%;
+}
+.hero-left > p {
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+.chat {
+    grid-area: five;
+    background-color: #1A1A1A;
+}
+.blackjack {
+    grid-area: six;
+}
+.poker {
+    grid-area: seven;
+}
+.slots {
+    grid-area: eight;
+}
+.roulette {
+    grid-area: nine;
+}
+.bonus {
+    grid-area: ten;
+}
+.search {
+    grid-area: eleven;
+    display: flex;
+    font-size: 14px; 
+}
+.search-bar {
+        width: 100%;
+    margin-left: 1rem;
+    position: relative;
+}
+.search-bar > input {
+    background-color: #0E0E10;
+    border: 1px solid #73000080;
+    border-radius: 0.2rem;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+}
+.search-bar > button {
+    position: absolute;
+    right: 0%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #73000080;
+    border-radius: 0 0.2rem 0.2rem 0;
+    border: none;
+    cursor: pointer;
+}
+.search-bar > button > svg {
+    height: 100%;
+    width: fit-content;
+    padding: 0.3rem;
+}
+
+.search-bar > input::placeholder {
+    color: #fff;
+    opacity: 0.2;
+    font-size: 10px;
+    padding-left: 0.5rem;
+}
+.search-inner {
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.selection:last-of-type{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    /* * Desktop styles here * */
+    .poker > img {
+        bottom: -20%;
+    }
+    .slots > img {
+        bottom: -20%;
+    }
+
+    .hero-section-mobile {
+        display: none;
+    }
+    .hero-left {
+    padding: 50px 0 0 5%;
+    }
+    .hero-left > p {
+    font-size: clamp(9px, 1vw, 12px);
+    }
+    .hero-left > h1 {
+    font-size: clamp(30px, 2.5vw, 40px);
+    }
+    .hero-left > h2 {
+    font-size: clamp(12px, 1.2vw, 15px);
+    }
+    .prompt2 {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1024px) {
+  /* Mobile styles here */
+    .prompt2> h1 {
+    font-size: clamp(18px, 2.02vw, 30px);
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+  .prompt2 {
+    background: linear-gradient(to bottom right, #000000, #7D0000);
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0 0 1rem;
+  }
+  .prompt2 > img {
+    object-fit: cover;
+    top: 0;
+    width: 80%;
+    height: 110%;
+    bottom: -5%;
+    right: -20%;
+    position: absolute;
+  }
+
+  .prompt2 > p {
+    margin-bottom: 0.6rem;
+    font-size: 10px;
+    font-style: italic;
+  }
+  .prompt2 > .register-button {
+    width: 80px;
+  }
+  .not-on-mobile {
+    display: none;
+  }
+  .play > img {
+    height: 120%;
+    object-fit: contain;
+    bottom: -15%;
+  }
+  .blackjack > img {
+    bottom: -25%;
+  }
+  .roulette > img {
+    bottom: -30%;
+  }
+
+  .hero-section-mobile {
+    background: linear-gradient(to left, #7D0000, #000000 90%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  .hero-section-desktop {
+    display: none;
+  }
+
+  .bonus {
+    display: none;
+  }
+  .hero-left > p {
+    margin-bottom: 20px;
+  }
+  .hero-img {
+    right: -22%;
+    width: 70%;
+  }
+    .hero-left {
+    padding: 7% 0 10% 5%;
+    width: 50%;
+    }
+    .hero-left > h1 {
+        font-size: 30px;
+    }
+    .hero-left > p {
+        font-size: 10px;
+    }
+
+  .navbar {
+    display: none;
+  }
+  .chat {
+    display: none;
+  }
+  .main-grid {
+    width: 95%;
+    grid-template-areas: 
+    'six seven eight nine'
+    'eleven eleven eleven eleven'
+    'one one one one'
+    'three three two two';
+  }
+  .prompt1 {
+    font-size: 12px;
+  }
+  .prompt1-bigger-text {
+    font-size: 14px;
+}
+.prompt1 > .register-button {
+    font-size: 10px;
+}
+
+
+}
+
