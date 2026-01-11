@@ -207,7 +207,7 @@ body {
 
 .play-button {
     border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: #FF0000B3 ;
+    background-color: #1a1a1a80;
     color: white;
     width: fit-content;
     padding: 2px 20px;
@@ -403,6 +403,8 @@ body {
     font-weight: normal;
     font-style: italic;
     margin-bottom: 0.3rem;
+    z-index: 2;
+    position: relative;
   }
   .prompt2 {
     background: linear-gradient(to bottom right, #000000, #7D0000);
@@ -419,15 +421,20 @@ body {
     bottom: -5%;
     right: -20%;
     position: absolute;
+    z-index: 1;
   }
 
   .prompt2 > p {
     margin-bottom: 0.6rem;
     font-size: 10px;
     font-style: italic;
+    z-index: 2;
+    position: relative;
   }
   .prompt2 > .register-button {
     width: 80px;
+    z-index: 2;
+    position: relative;
   }
   .not-on-mobile {
     display: none;
@@ -438,7 +445,7 @@ body {
     bottom: -15%;
   }
   .blackjack > img {
-    bottom: -25%;
+    bottom: -30%;
   }
   .roulette > img {
     bottom: -30%;
